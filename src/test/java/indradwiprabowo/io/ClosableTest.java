@@ -35,7 +35,10 @@ public class ClosableTest {
     void closeIOWithResource() throws IOException {
         Path path = Path.of("pom.xml");
 
-        try (InputStream inputStream = Files.newInputStream(path)) {
+        try (InputStream inputStream = Files.newInputStream(path);
+             InputStream inputStream2 = Files.newInputStream(path);
+             InputStream inputStream3 = Files.newInputStream(path);
+             InputStream inputStream4 = Files.newInputStream(path)) {
             // lakukan apapun dengan input stream
         } catch (IOException exception) {
             Assertions.fail(exception);
