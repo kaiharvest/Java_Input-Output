@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class Person implements Serializable {
 
-    public static final long serialVersionID = 1L;
+    private static final long serialVersionID = 1L;
 
     private String id;
 
